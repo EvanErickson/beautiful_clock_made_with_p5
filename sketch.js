@@ -18,11 +18,11 @@ function draw() {
 
     //Second hand
     let sec = map(sc, 0, 60, 0, 360);
-    arc(0, 0, 260, 260, 0, sec);
+    arc(0, 0, 300, 300, 0, sec);
     push();
     rotate(sec);
     stroke(255, 100, 150);
-    line(0, 0, 128, 0);
+    line(0, 0, 120, 0);
     pop();
 
     //Minute hand
@@ -32,18 +32,22 @@ function draw() {
     push();
     rotate(min);
     stroke(150, 100, 255);
-    line(0, 0, 100, 0);
+    line(0, 0, 90, 0);
     pop();
 
     //Hour hand
     stroke(150, 255, 100);
     let hou = map(hr % 12, 0, 12, 0, 360);
-    arc(0, 0, 300, 300, 0, hou);
+    arc(0, 0, 260, 260, 0, hou);
     push();
     rotate(hou);
     stroke(150, 255, 100);
-    line(0, 0, 75, 0);
+    line(0, 0, 69, 0);
     pop();
+    
+    // White center dot in middle
+    stroke(255);
+    point(0, 0);
 
 
 
